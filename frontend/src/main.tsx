@@ -1,14 +1,16 @@
-import React from "react";
+import { Navigate, RouterProvider, createRouter } from "@tanstack/react-router";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { routeTree } from "./routeTree.gen";
 import "./index.css";
+import { routeTree } from "./routeTree.gen";
 
 // Set up a Router instance
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
   scrollRestoration: true,
+  defaultNotFoundComponent: () => {
+    return <Navigate to="/not-found" />;
+  },
 });
 
 // Register things for typesafety
