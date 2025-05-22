@@ -7,7 +7,7 @@ import {
   DollarSign,
   Home,
   PieChart,
-  Settings,
+  UserPen,
 } from "lucide-react";
 
 const Sidebar = () => {
@@ -57,11 +57,11 @@ const Sidebar = () => {
             <span>Reports</span>
           </Link>
           <Link
-            to="/settings"
+            to="/profile"
             className="flex items-center gap-3 px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100"
           >
-            <Settings className="h-5 w-5" />
-            <span>Settings</span>
+            <UserPen className="h-5 w-5" />
+            <span>Profile</span>
           </Link>
         </div>
       </nav>
